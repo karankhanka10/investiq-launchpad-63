@@ -219,26 +219,26 @@
   
   /* Enhanced Stats styling with better hierarchy */
   .stats-container {
-    @apply grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16;
+    @apply grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12;
   }
   
   .stats-item {
-    @apply text-center md:text-left space-y-3;
+    @apply text-center md:text-left space-y-2;
   }
   
   .stats-number {
-    @apply text-4xl md:text-5xl text-white font-investment;
+    @apply text-2xl md:text-3xl text-white font-investment;
     text-shadow: var(--text-shadow-subtle);
     line-height: 1.1;
   }
   
   .stats-label {
-    @apply text-base text-hero-text-secondary uppercase tracking-wider;
-    letter-spacing: 0.1em;
+    @apply text-sm text-hero-text-secondary uppercase tracking-wider;
+    letter-spacing: 0.08em;
   }
   
   .stats-icon {
-    @apply inline-flex items-center justify-center w-6 h-6 mr-3 text-investment-accent;
+    @apply inline-flex items-center justify-center w-5 h-5 mr-2 text-investment-accent;
   }
   
   /* Navigation enhancements */
