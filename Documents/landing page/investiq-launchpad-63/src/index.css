@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Investment Platform Design System - Professional, Clean, Trustworthy */
+
+@layer base {
+  :root {
+    /* Investment Platform Color Palette */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    /* Hero & Investment-specific colors */
+    --hero-text: 0 0% 100%; /* Pure white for hero text */
+    --hero-text-secondary: 210 7% 80%; /* Light gray for subtext */
+    --hero-overlay: 0 0% 0%; /* Black for gradient overlay */
+    --investment-accent: 42 100% 50%; /* Gold accent for financial context */
+    
+    /* CTA Button colors */
+    --cta-primary: 0 0% 100%; /* White background */
+    --cta-primary-foreground: 0 0% 0%; /* Black text */
+    --cta-primary-hover: 0 0% 95%; /* Slightly darker on hover */
+
+    /* Navigation colors */
+    --nav-text: 0 0% 100%; /* White navigation text */
+    --nav-text-hover: 210 7% 87%; /* Light gray hover */
+
+    /* Card and content colors */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 0 0% 0%; /* Black primary */
+    --primary-foreground: 0 0% 100%; /* White on black */
+
+    --secondary: 0 0% 97%; /* Very light gray */
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 0%;
+
+    --radius: 0.75rem; /* Slightly more rounded for modern feel */
+
+    /* Typography system */
+    --font-size-hero: 4rem; /* 64px */
+    --font-size-hero-mobile: 2.5rem; /* 40px */
+    --font-size-subtext: 1.25rem; /* 20px */
+    
+    /* Gradients */
+    --gradient-hero-overlay: linear-gradient(135deg, hsl(var(--hero-overlay) / 0.7), hsl(var(--hero-overlay) / 0.5));
+    --gradient-hero-dark: linear-gradient(to bottom, hsl(var(--hero-overlay) / 0.8), hsl(var(--hero-overlay) / 0.4));
+    
+    /* Shadows */
+    --shadow-elegant: 0 20px 40px -12px hsl(var(--hero-overlay) / 0.25);
+    --shadow-button: 0 8px 24px -8px hsl(var(--hero-overlay) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-button: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode maintains same professional investment platform colors */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 100%;
+    
+    --hero-text: 0 0% 100%;
+    --hero-text-secondary: 210 7% 80%;
+    --hero-overlay: 0 0% 0%;
+    --investment-accent: 42 100% 55%;
+    
+    --cta-primary: 0 0% 100%;
+    --cta-primary-foreground: 0 0% 0%;
+    --cta-primary-hover: 0 0% 95%;
+
+    --nav-text: 0 0% 100%;
+    --nav-text-hover: 210 7% 87%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  /* Typography - Helvetica Neue as requested */
+  .font-investment {
+    font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  /* Hero section styles */
+  .hero-bg {
+    background-image: var(--gradient-hero-overlay), url('/src/assets/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  /* Button variants */
+  .btn-cta {
+    @apply bg-white text-black hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105;
+  }
+  
+  /* Stats styling */
+  .stats-number {
+    @apply text-3xl md:text-4xl font-bold text-white font-investment;
+  }
+  
+  .stats-label {
+    @apply text-sm text-gray-300 font-medium uppercase tracking-wide;
+  }
+}
