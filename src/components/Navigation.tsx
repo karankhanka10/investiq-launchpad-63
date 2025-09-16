@@ -12,7 +12,7 @@ const Navigation = () => {
     <nav className="absolute top-0 left-0 right-0 z-50 px-6 py-6">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Brand */}
-        <div className="font-investment text-nav-text text-xl font-bold">
+        <div className="nav-brand">
           InvestAI
         </div>
 
@@ -22,7 +22,7 @@ const Navigation = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-nav-text hover:text-nav-text-hover transition-colors duration-200 font-medium"
+              className="nav-link"
             >
               {link.name}
             </a>
@@ -33,7 +33,7 @@ const Navigation = () => {
         <div className="flex items-center space-x-2">
           <a
             href="#signin"
-            className="text-nav-text hover:text-nav-text-hover transition-colors duration-200 font-medium flex items-center gap-1"
+            className="nav-link flex items-center gap-1"
           >
             Sign In
             <ArrowRight className="w-4 h-4" />

@@ -1,10 +1,26 @@
 import heroBackground from "@/assets/hero-bg.png";
+import { TrendingUp, Target, Users } from "lucide-react";
 
 const Hero = () => {
   const stats = [
-    { value: "+18.3%", label: "Average annualized ROI" },
-    { value: "3,427", label: "Active strategies" },
-    { value: "72,000+", label: "Global users" },
+    { 
+      value: "+18.3%", 
+      label: "Average annualized ROI",
+      icon: TrendingUp,
+      delay: "0.2s"
+    },
+    { 
+      value: "3,427", 
+      label: "Active strategies",
+      icon: Target,
+      delay: "0.4s"
+    },
+    { 
+      value: "72,000+", 
+      label: "Global users",
+      icon: Users,
+      delay: "0.6s"
+    },
   ];
 
   return (
@@ -14,34 +30,47 @@ const Hero = () => {
         backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(${heroBackground})`,
       }}
     >
-      <div className="w-full px-6 py-20">
+      <div className="w-full section-padding">
         {/* Hero Content */}
-        <div className="pl-20 max-w-[550px] text-left">
-          <h1 className="font-investment text-hero-text text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
+        <div className="hero-content animate-fade-in">
+          <h1 className="hero-headline">
             Smarter investing
             <br />
             starts here
           </h1>
           
-          <p className="text-hero-text-secondary text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
+          <p className="hero-subtext">
             Harness the power of AI-driven investment strategies to optimize your portfolio and maximize returns with institutional-grade analytics.
           </p>
           
-          <button className="btn-cta inline-flex items-center">
+          <button className="btn-cta inline-flex items-center gap-2 animate-glow-pulse">
             Start Investing
+            <TrendingUp className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Stats Section */}
+        {/* Enhanced Stats Section */}
         <div className="absolute bottom-20 left-6 right-6">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center md:text-left">
-                  <div className="stats-number">{stat.value}</div>
-                  <div className="stats-label mt-2">{stat.label}</div>
-                </div>
-              ))}
+            <div className="stats-container">
+              {stats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div 
+                    key={index} 
+                    className="stats-item animate-slide-up"
+                    style={{ animationDelay: stat.delay }}
+                  >
+                    <div className="flex items-center justify-center md:justify-start mb-2">
+                      <div className="stats-icon">
+                        <Icon className="w-6 h-6" />
+                      </div>
+                      <div className="stats-number">{stat.value}</div>
+                    </div>
+                    <div className="stats-label">{stat.label}</div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

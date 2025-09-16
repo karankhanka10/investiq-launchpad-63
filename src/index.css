@@ -2,28 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Investment Platform Design System - Professional, Clean, Trustworthy */
+/* Investment Platform Design System - Elevated & Professional */
 
 @layer base {
   :root {
-    /* Investment Platform Color Palette */
+    /* Core Brand Color Palette - Two primaries + accent */
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
 
+    /* Primary Brand Colors */
+    --brand-primary: 220 100% 8%; /* Deep navy - primary brand color */
+    --brand-secondary: 0 0% 100%; /* Pure white - secondary brand color */
+    --brand-accent: 39 100% 65%; /* Warm gold - accent for highlights */
+    
     /* Hero & Investment-specific colors */
     --hero-text: 0 0% 100%; /* Pure white for hero text */
-    --hero-text-secondary: 210 7% 80%; /* Light gray for subtext */
-    --hero-overlay: 0 0% 0%; /* Black for gradient overlay */
-    --investment-accent: 42 100% 50%; /* Gold accent for financial context */
+    --hero-text-secondary: 210 15% 85%; /* Improved contrast for subtext */
+    --hero-overlay: 220 100% 8%; /* Deep navy for overlay */
+    --investment-accent: 39 100% 65%; /* Warm gold accent */
     
-    /* CTA Button colors */
-    --cta-primary: 0 0% 100%; /* White background */
-    --cta-primary-foreground: 0 0% 0%; /* Black text */
-    --cta-primary-hover: 0 0% 95%; /* Slightly darker on hover */
+    /* Enhanced CTA Button colors */
+    --cta-primary: 39 100% 65%; /* Gold background for high contrast */
+    --cta-primary-foreground: 220 100% 8%; /* Deep navy text */
+    --cta-primary-hover: 39 100% 70%; /* Brighter gold on hover */
+    --cta-glow: 39 100% 65%; /* Gold glow effect */
 
     /* Navigation colors */
     --nav-text: 0 0% 100%; /* White navigation text */
-    --nav-text-hover: 210 7% 87%; /* Light gray hover */
+    --nav-text-hover: 39 100% 75%; /* Gold hover for consistency */
+    --nav-logo: 39 100% 65%; /* Gold logo */
 
     /* Card and content colors */
     --card: 0 0% 100%;
@@ -53,22 +60,31 @@
 
     --radius: 0.75rem; /* Slightly more rounded for modern feel */
 
-    /* Typography system */
-    --font-size-hero: 4rem; /* 64px */
-    --font-size-hero-mobile: 2.5rem; /* 40px */
-    --font-size-subtext: 1.25rem; /* 20px */
+    /* Enhanced Typography system */
+    --font-size-hero: 5rem; /* 80px - larger for impact */
+    --font-size-hero-mobile: 3rem; /* 48px */
+    --font-size-subtext: 1.375rem; /* 22px - better readability */
+    --line-height-hero: 1.1; /* Tighter for impact */
+    --line-height-subtext: 1.6; /* Airy for readability */
+    --letter-spacing-hero: -0.02em; /* Subtle tracking */
+    --letter-spacing-subtext: 0.01em; /* Open feeling */
     
-    /* Gradients */
-    --gradient-hero-overlay: linear-gradient(135deg, hsl(var(--hero-overlay) / 0.7), hsl(var(--hero-overlay) / 0.5));
-    --gradient-hero-dark: linear-gradient(to bottom, hsl(var(--hero-overlay) / 0.8), hsl(var(--hero-overlay) / 0.4));
+    /* Enhanced Gradients */
+    --gradient-hero-overlay: linear-gradient(135deg, hsl(var(--hero-overlay) / 0.8), hsl(var(--hero-overlay) / 0.6));
+    --gradient-hero-dark: linear-gradient(to bottom, hsl(var(--hero-overlay) / 0.9), hsl(var(--hero-overlay) / 0.5));
+    --gradient-cta: linear-gradient(135deg, hsl(var(--cta-primary)), hsl(var(--cta-primary-hover)));
     
-    /* Shadows */
-    --shadow-elegant: 0 20px 40px -12px hsl(var(--hero-overlay) / 0.25);
-    --shadow-button: 0 8px 24px -8px hsl(var(--hero-overlay) / 0.3);
+    /* Enhanced Shadows & Glows */
+    --shadow-elegant: 0 25px 50px -12px hsl(var(--hero-overlay) / 0.3);
+    --shadow-button: 0 10px 30px -8px hsl(var(--cta-glow) / 0.4);
+    --glow-button: 0 0 30px hsl(var(--cta-glow) / 0.3);
+    --text-shadow-hero: 0 2px 8px hsl(var(--hero-overlay) / 0.5);
+    --text-shadow-subtle: 0 1px 3px hsl(var(--hero-overlay) / 0.3);
 
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-button: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Enhanced Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-button: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.3s ease-in-out;
 
     --sidebar-background: 0 0% 98%;
 
@@ -88,21 +104,27 @@
   }
 
   .dark {
-    /* Dark mode maintains same professional investment platform colors */
+    /* Dark mode - enhanced brand consistency */
     --background: 0 0% 7%;
     --foreground: 0 0% 100%;
     
-    --hero-text: 0 0% 100%;
-    --hero-text-secondary: 210 7% 80%;
-    --hero-overlay: 0 0% 0%;
-    --investment-accent: 42 100% 55%;
+    --brand-primary: 220 100% 12%;
+    --brand-secondary: 0 0% 100%;
+    --brand-accent: 39 100% 70%;
     
-    --cta-primary: 0 0% 100%;
-    --cta-primary-foreground: 0 0% 0%;
-    --cta-primary-hover: 0 0% 95%;
+    --hero-text: 0 0% 100%;
+    --hero-text-secondary: 210 15% 85%;
+    --hero-overlay: 220 100% 5%;
+    --investment-accent: 39 100% 70%;
+    
+    --cta-primary: 39 100% 65%;
+    --cta-primary-foreground: 220 100% 8%;
+    --cta-primary-hover: 39 100% 70%;
+    --cta-glow: 39 100% 65%;
 
     --nav-text: 0 0% 100%;
-    --nav-text-hover: 210 7% 87%;
+    --nav-text-hover: 39 100% 75%;
+    --nav-logo: 39 100% 65%;
 
     --card: 0 0% 10%;
     --card-foreground: 0 0% 100%;
@@ -140,14 +162,23 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
   
-  /* Typography - Helvetica Neue as requested */
+  /* Enhanced Typography - Professional Investment Platform */
   .font-investment {
-    font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+  
+  /* Smooth scrolling and better text rendering */
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
 @layer components {
-  /* Hero section styles */
+  /* Enhanced Hero section styles */
   .hero-bg {
     background-image: var(--gradient-hero-overlay), url('/src/assets/hero-bg.png');
     background-size: cover;
@@ -156,17 +187,85 @@
     background-attachment: fixed;
   }
   
-  /* Button variants */
-  .btn-cta {
-    @apply bg-white text-black hover:bg-gray-100 px-8 py-4 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105;
+  /* Enhanced Typography Classes */
+  .hero-headline {
+    font-size: clamp(3rem, 8vw, var(--font-size-hero));
+    line-height: var(--line-height-hero);
+    letter-spacing: var(--letter-spacing-hero);
+    text-shadow: var(--text-shadow-hero);
+    @apply font-investment text-hero-text mb-8;
   }
   
-  /* Stats styling */
+  .hero-subtext {
+    font-size: var(--font-size-subtext);
+    line-height: var(--line-height-subtext);
+    letter-spacing: var(--letter-spacing-subtext);
+    text-shadow: var(--text-shadow-subtle);
+    @apply text-hero-text-secondary mb-12 max-w-xl;
+  }
+  
+  /* Enhanced CTA Button */
+  .btn-cta {
+    background: var(--gradient-cta);
+    box-shadow: var(--shadow-button);
+    transition: var(--transition-button), var(--transition-glow);
+    @apply text-cta-primary-foreground px-10 py-5 rounded-full text-lg font-medium transform hover:scale-105 hover:shadow-2xl;
+  }
+  
+  .btn-cta:hover {
+    box-shadow: var(--shadow-button), var(--glow-button);
+    transform: translateY(-2px) scale(1.05);
+  }
+  
+  /* Enhanced Stats styling with better hierarchy */
+  .stats-container {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16;
+  }
+  
+  .stats-item {
+    @apply text-center md:text-left space-y-3;
+  }
+  
   .stats-number {
-    @apply text-3xl md:text-4xl text-white font-investment;
+    @apply text-4xl md:text-5xl text-white font-investment;
+    text-shadow: var(--text-shadow-subtle);
+    line-height: 1.1;
   }
   
   .stats-label {
-    @apply text-sm text-gray-300 uppercase tracking-wide;
+    @apply text-base text-hero-text-secondary uppercase tracking-wider;
+    letter-spacing: 0.1em;
+  }
+  
+  .stats-icon {
+    @apply inline-flex items-center justify-center w-6 h-6 mr-3 text-investment-accent;
+  }
+  
+  /* Navigation enhancements */
+  .nav-brand {
+    @apply font-investment text-nav-logo text-xl font-medium tracking-tight;
+  }
+  
+  .nav-link {
+    @apply text-nav-text hover:text-nav-text-hover transition-all duration-300 font-medium relative;
+  }
+  
+  .nav-link:hover::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-nav-text-hover transform scale-x-100 transition-transform duration-300;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-nav-text-hover transform scale-x-0 transition-transform duration-300 origin-right;
+  }
+  
+  /* Enhanced spacing and layout */
+  .hero-content {
+    @apply pl-20 max-w-2xl text-left space-y-8;
+  }
+  
+  .section-padding {
+    @apply px-6 py-24 md:py-32;
   }
 }
