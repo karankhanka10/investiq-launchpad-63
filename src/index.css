@@ -158,15 +158,15 @@
   
   /* Button variants */
   .btn-cta {
-    @apply bg-white text-black hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105;
+    @apply bg-white text-black hover:bg-gray-100 px-8 py-4 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105;
   }
   
   /* Stats styling */
   .stats-number {
-    @apply text-3xl md:text-4xl font-bold text-white font-investment;
+    @apply text-3xl md:text-4xl text-white font-investment;
   }
   
   .stats-label {
-    @apply text-sm text-gray-300 font-medium uppercase tracking-wide;
+    @apply text-sm text-gray-300 uppercase tracking-wide;
   }
 }
