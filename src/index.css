@@ -189,19 +189,19 @@
   
   /* Enhanced Typography Classes */
   .hero-headline {
-    font-size: clamp(3rem, 8vw, var(--font-size-hero));
+    font-size: clamp(2.5rem, 6vw, 4rem);
     line-height: var(--line-height-hero);
     letter-spacing: var(--letter-spacing-hero);
     text-shadow: var(--text-shadow-hero);
-    @apply font-investment text-hero-text mb-8;
+    @apply font-investment text-hero-text mb-6;
   }
   
   .hero-subtext {
-    font-size: var(--font-size-subtext);
+    font-size: 1.125rem;
     line-height: var(--line-height-subtext);
     letter-spacing: var(--letter-spacing-subtext);
     text-shadow: var(--text-shadow-subtle);
-    @apply text-hero-text-secondary mb-12 max-w-xl;
+    @apply text-hero-text-secondary mb-8 max-w-md;
   }
   
   /* Enhanced CTA Button */
@@ -262,7 +262,7 @@
   
   /* Enhanced spacing and layout */
   .hero-content {
-    @apply pl-20 max-w-2xl text-left space-y-8;
+    @apply pl-20 max-w-lg text-left space-y-6;
   }
   
   .section-padding {
