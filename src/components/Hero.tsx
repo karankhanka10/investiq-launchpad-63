@@ -14,7 +14,7 @@ const Hero = () => {
         backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(${heroBackground})`,
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="w-full px-6 py-20">
         {/* Hero Content */}
         <div className="pl-20 max-w-[550px] text-left">
           <h1 className="font-investment text-hero-text text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
