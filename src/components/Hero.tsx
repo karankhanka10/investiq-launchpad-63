@@ -16,7 +16,7 @@ const Hero = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-20">
         {/* Hero Content */}
-        <div className="">
+        <div className="pl-6 md:pl-8 lg:pl-12 max-w-none text-left">
           <h1 className="font-investment text-hero-text text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
             Smarter investing
             <br />
