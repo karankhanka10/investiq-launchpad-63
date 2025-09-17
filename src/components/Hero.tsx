@@ -34,9 +34,7 @@ const Hero = () => {
         {/* Hero Content */}
         <div className="hero-content animate-fade-in">
           <h1 className="hero-headline">
-            Smarter investing
-            <br />
-            starts here
+            Smarter investing starts here
           </h1>
           
           <p className="hero-subtext">
