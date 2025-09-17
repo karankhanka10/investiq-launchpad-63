@@ -262,7 +262,7 @@
   
   /* Enhanced spacing and layout */
   .hero-content {
-    @apply pl-20 max-w-lg text-left space-y-6;
+    @apply pl-8 max-w-lg text-left space-y-4;
   }
   
   .section-padding {
