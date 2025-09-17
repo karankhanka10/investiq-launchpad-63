@@ -46,13 +46,13 @@ const Hero = () => {
               return <div key={index} className="stats-item animate-slide-up" style={{
                 animationDelay: stat.delay
               }}>
-                    <div className="flex items-center justify-center md:justify-start mb-2">
+                    <div className="flex flex-col items-center space-y-2">
                       <div className="stats-icon">
                         <Icon className="w-6 h-6" strokeWidth={1.5} />
                       </div>
                       <div className="stats-number">{stat.value}</div>
+                      <div className="stats-label">{stat.label}</div>
                     </div>
-                    <div className="stats-label">{stat.label}</div>
                   </div>;
             })}
             </div>
