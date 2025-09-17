@@ -25,9 +25,7 @@ const Hero = () => {
         <div className="hero-content animate-fade-in">
           <h1 className="hero-headline">Intelligent investing made effortless</h1>
           
-          <p className="hero-subtext">
-            Harness the power of AI-driven investment strategies to optimize your portfolio and maximize returns with institutional-grade analytics.
-          </p>
+          <p className="hero-subtext">Leverage AI-powered insights to build a smarter portfolio, reduce risk, and capture opportunities that traditional analysis might miss.</p>
           
           <button className="btn-cta inline-flex items-center gap-2 animate-glow-pulse">
             Start Investing
