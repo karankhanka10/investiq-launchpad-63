@@ -205,7 +205,7 @@
     line-height: var(--line-height-subtext);
     letter-spacing: var(--letter-spacing-subtext);
     text-shadow: var(--text-shadow-subtle);
-    @apply text-hero-text-secondary mb-6 max-w-md;
+    @apply text-hero-text-secondary mb-6 max-w-lg;
   }
   
   /* Glassmorphism CTA Button */
@@ -270,7 +270,7 @@
   
   /* Enhanced spacing and layout */
   .hero-content {
-    @apply pl-6 max-w-[550px] text-left space-y-3;
+    @apply pl-6 max-w-[700px] text-left space-y-3;
   }
   
   .section-padding {
