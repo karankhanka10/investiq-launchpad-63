@@ -38,7 +38,7 @@ const Hero = () => {
         </div>
 
         {/* Enhanced Stats Section */}
-        <div className="absolute bottom-20 left-6 right-6">
+        <div className="absolute bottom-6 left-6 right-6">
           <div className="max-w-7xl mx-auto">
             <div className="stats-container">
               {stats.map((stat, index) => {
