@@ -197,7 +197,7 @@
     line-height: var(--line-height-hero);
     letter-spacing: var(--letter-spacing-hero);
     text-shadow: var(--text-shadow-hero);
-    @apply font-investment text-hero-text mb-6;
+    @apply font-investment text-hero-text mb-3;
   }
   
   .hero-subtext {
@@ -205,7 +205,7 @@
     line-height: var(--line-height-subtext);
     letter-spacing: var(--letter-spacing-subtext);
     text-shadow: var(--text-shadow-subtle);
-    @apply text-hero-text-secondary mb-8 max-w-md;
+    @apply text-hero-text-secondary mb-6 max-w-md;
   }
   
   /* Glassmorphism CTA Button */
@@ -270,7 +270,7 @@
   
   /* Enhanced spacing and layout */
   .hero-content {
-    @apply pl-8 max-w-[550px] text-left space-y-4;
+    @apply pl-6 max-w-[550px] text-left space-y-3;
   }
   
   .section-padding {
