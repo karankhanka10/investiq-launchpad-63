@@ -2,17 +2,17 @@ import heroBackground from "@/assets/hero-bg.png";
 import { TrendingUp, Target, Users } from "lucide-react";
 const Hero = () => {
   const stats = [{
-    value: "+18.3%",
+    value: "+24.7%",
     label: "Average annualized ROI",
     icon: TrendingUp,
     delay: "0.2s"
   }, {
-    value: "3,427",
+    value: "5,892",
     label: "Active strategies",
     icon: Target,
     delay: "0.4s"
   }, {
-    value: "72,000+",
+    value: "156,000+",
     label: "Global users",
     icon: Users,
     delay: "0.6s"
