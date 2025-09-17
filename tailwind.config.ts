@@ -145,6 +145,9 @@ export default {
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
         "float": "float 3s ease-in-out infinite",
       },
+      fontFamily: {
+        'neue': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+      },
       spacing: {
         '18': '4.5rem',
         '22': '5.5rem',

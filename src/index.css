@@ -168,6 +168,10 @@
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
   
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  }
+  
   /* Smooth scrolling and better text rendering */
   html {
     scroll-behavior: smooth;
