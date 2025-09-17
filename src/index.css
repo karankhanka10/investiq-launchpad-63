@@ -183,17 +183,12 @@
 
 @layer components {
   /* Enhanced Hero section styles */
-  .hero-background {
-    background-image: url('/src/assets/hero-bg.png');
+  .hero-bg {
+    background-image: var(--gradient-hero-overlay), url('/src/assets/hero-bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-  
-  /* Noise texture for subtle depth */
-  .noise-texture {
-    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0);
-    background-size: 20px 20px;
+    background-attachment: fixed;
   }
   
   /* Enhanced Typography Classes */
@@ -213,31 +208,17 @@
     @apply text-hero-text-secondary mb-8 max-w-md;
   }
   
-  /* Glassmorphism CTA Button */
-  .btn-cta-glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full text-base font-medium relative overflow-hidden;
-    background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
-    box-shadow: 
-      0 8px 32px rgba(0,0,0,0.3),
-      inset 0 1px 0 rgba(255,255,255,0.2);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Enhanced CTA Button */
+  .btn-cta {
+    background: var(--gradient-cta);
+    box-shadow: var(--shadow-button);
+    transition: var(--transition-button), var(--transition-glow);
+    @apply text-cta-primary-foreground px-10 py-5 rounded-full text-lg font-medium transform hover:scale-105 hover:shadow-2xl;
   }
   
-  .btn-cta-glass::before {
-    content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 opacity-0 transition-opacity duration-300;
-  }
-  
-  .btn-cta-glass:hover::before {
-    @apply opacity-100;
-  }
-  
-  .btn-cta-glass:hover {
-    @apply border-white/30;
-    box-shadow: 
-      0 12px 40px rgba(0,0,0,0.4),
-      inset 0 1px 0 rgba(255,255,255,0.3),
-      0 0 0 1px rgba(255,255,255,0.1);
+  .btn-cta:hover {
+    box-shadow: var(--shadow-button), var(--glow-button);
+    transform: translateY(-2px) scale(1.05);
   }
   
   /* Enhanced Stats styling with better hierarchy */
@@ -283,16 +264,9 @@
     @apply absolute bottom-0 left-0 w-full h-0.5 bg-nav-text-hover transform scale-x-0 transition-transform duration-300 origin-right;
   }
   
-  /* Enhanced spacing and layout with fluid design */
-  .hero-content-enhanced {
-    @apply text-left space-y-6;
-    padding-left: clamp(2rem, 8vw, 6rem);
-    max-width: min(550px, 90vw);
-  }
-  
-  .hero-section-padding {
-    @apply px-6 py-24 md:py-32;
-    padding-left: clamp(1.5rem, 6vw, 4rem);
+  /* Enhanced spacing and layout */
+  .hero-content {
+    @apply pl-8 max-w-2xl text-left space-y-4;
   }
   
   .section-padding {
