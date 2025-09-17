@@ -227,11 +227,11 @@
   
   /* Enhanced Stats styling with better hierarchy */
   .stats-container {
-    @apply grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12;
+    @apply grid grid-cols-3 gap-8 w-full;
   }
   
   .stats-item {
-    @apply text-center md:text-left space-y-2;
+    @apply text-center space-y-2;
   }
   
   .stats-number {

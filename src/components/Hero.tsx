@@ -38,8 +38,8 @@ const Hero = () => {
         </div>
 
         {/* Enhanced Stats Section */}
-        <div className="absolute bottom-6 left-6 right-6">
-          <div className="max-w-7xl mx-auto">
+        <div className="absolute bottom-0 left-0 right-0">
+          <div className="w-full px-6 py-4">
             <div className="stats-container">
               {stats.map((stat, index) => {
               const Icon = stat.icon;
