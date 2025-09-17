@@ -72,12 +72,12 @@
     /* Enhanced Gradients */
     --gradient-hero-overlay: linear-gradient(135deg, hsl(var(--hero-overlay) / 0.8), hsl(var(--hero-overlay) / 0.6));
     --gradient-hero-dark: linear-gradient(to bottom, hsl(var(--hero-overlay) / 0.9), hsl(var(--hero-overlay) / 0.5));
-    --gradient-cta: linear-gradient(135deg, hsl(var(--cta-primary)), hsl(var(--cta-primary-hover)));
+    --gradient-cta: linear-gradient(135deg, hsl(var(--cta-primary) / 0.1), hsl(var(--cta-primary) / 0.05));
     
     /* Enhanced Shadows & Glows */
     --shadow-elegant: 0 25px 50px -12px hsl(var(--hero-overlay) / 0.3);
-    --shadow-button: 0 10px 30px -8px hsl(var(--cta-glow) / 0.4);
-    --glow-button: 0 0 30px hsl(var(--cta-glow) / 0.3);
+    --shadow-button: 0 8px 32px -8px hsl(var(--cta-glow) / 0.3);
+    --glow-button: 0 0 40px hsl(var(--cta-glow) / 0.4), inset 0 1px 0 hsl(var(--cta-glow) / 0.1);
     --text-shadow-hero: 0 2px 8px hsl(var(--hero-overlay) / 0.5);
     --text-shadow-subtle: 0 1px 3px hsl(var(--hero-overlay) / 0.3);
 
@@ -208,17 +208,21 @@
     @apply text-hero-text-secondary mb-8 max-w-md;
   }
   
-  /* Enhanced CTA Button */
+  /* Glassmorphism CTA Button */
   .btn-cta {
-    background: var(--gradient-cta);
-    box-shadow: var(--shadow-button);
-    transition: var(--transition-button), var(--transition-glow);
-    @apply text-cta-primary-foreground px-10 py-5 rounded-full text-lg font-medium transform hover:scale-105 hover:shadow-2xl;
+    background: hsl(var(--cta-primary) / 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--cta-primary) / 0.2);
+    box-shadow: var(--shadow-button), inset 0 1px 0 hsl(var(--cta-primary) / 0.1);
+    transition: var(--transition-button);
+    @apply text-cta-primary px-10 py-5 rounded-full text-lg font-medium transform hover:scale-[1.02];
   }
   
   .btn-cta:hover {
-    box-shadow: var(--shadow-button), var(--glow-button);
-    transform: translateY(-2px) scale(1.05);
+    background: hsl(var(--cta-primary) / 0.15);
+    border-color: hsl(var(--cta-primary) / 0.3);
+    box-shadow: var(--glow-button), var(--shadow-button);
+    transform: translateY(-1px) scale(1.02);
   }
   
   /* Enhanced Stats styling with better hierarchy */
@@ -266,10 +270,18 @@
   
   /* Enhanced spacing and layout */
   .hero-content {
-    @apply pl-8 max-w-2xl text-left space-y-4;
+    @apply pl-8 max-w-[550px] text-left space-y-6;
   }
   
   .section-padding {
     @apply px-6 py-24 md:py-32;
+  }
+  
+  /* Noise texture overlay */
+  .bg-noise {
+    background-image: 
+      radial-gradient(circle at 25px 25px, rgba(255,255,255,0.1) 2%, transparent 0%), 
+      radial-gradient(circle at 75px 75px, rgba(255,255,255,0.1) 2%, transparent 0%);
+    background-size: 100px 100px;
   }
 }
